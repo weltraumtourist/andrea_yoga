@@ -3,7 +3,8 @@ html, body {
     margin: 0;
     padding: 0;
     text-align: center;
-    
+    font-family: 'Tahoma', sans-serif;
+    font-size: 16px;
     background-color: rgb(185, 184, 184);    
 }
 
@@ -17,15 +18,29 @@ html, body {
     background-color: white;
 }
 
-
+hr {
+    width: 5%;
+    height:3px;
+    border:0;
+    margin: 5 auto 20px auto;
+    background: black;
+    
+}
 
 a {
     text-decoration: none;
+    color: black
 }
 
 section {
-    margin-top: 20vh;
     min-height: 100vh;
+}
+
+#contact h2, #about h2, #kurse h2, #viniyoga h2, #angebote h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    margin-bottom: 0;
+
 }
 
 li {
@@ -39,11 +54,7 @@ h1 {font-family: 'Pattaya', sans-serif;
     margin-bottom: 0px;
 }
 
-h2 {font-family: 'Tahoma', sans-serif;
-    font-size: 40px;
-    padding-top: 0px;
-    margin-top: 0px;
-}
+
 
 h4 {
     font-family: 'Tahoma', sans-serif;
@@ -67,11 +78,12 @@ header {
     background:white;
     z-index: 5;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    margin-right: auto; /* 1 */
-    margin-left:  auto; /* 1 */
-  
-    max-width: 960px; /* 2 */
+    margin-right: auto; 
+    margin-left:  auto; 
+    max-width: 960px; 
 }
+
+
 
 #logo {
     float:left;
@@ -80,7 +92,7 @@ header {
     padding-left: 5px;
 }
 
-#logo:hover {
+#logo:hover, a:hover {
     opacity: 0.5;
 }
 
@@ -98,7 +110,7 @@ header nav ul li {
     margin-right:25px;
 }
 
-header nav ul li a {
+header nav ul li a{
    font-size: 25px;
    font-family: 'Quicksand', sans-serif;
    font-weight: 600;
@@ -109,6 +121,52 @@ header nav ul li:hover {
     opacity: 0.5;
 }
 
+
+
+/* Footer */
+
+footer {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    position: fixed;
+    bottom: 0;
+    max-height:30px;
+    background-color: white;
+    margin-right: auto; 
+    margin-left:  auto; 
+    max-width: 960px;
+    width:100%; 
+}
+
+
+
+#footer_nav {
+    text-align:right;
+}
+
+#footer_nav ul li {
+    float:right;
+    margin-right:25px;
+}
+
+
+footer ul li a, #copyright {
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    color: black;
+ }
+
+
+
+
+
+
+/* Generelles Styling Inhaltsbereich */
+
+
 #spacer {
     margin-top: 0px;
     padding-top: 0px;
@@ -117,15 +175,39 @@ header nav ul li:hover {
     background-color: rgb(255, 255, 255);
 }
 
+.pfeil:hover {
+    opacity: 0.5;
+}
+
+p{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align:justify;
+}
+
+
+
+
+
+
+
+
+
+/* Spezifisches Styling der einzelnen Unterseiten */
+
 /* Landingpage */
+
+#landing h2 {font-family: 'Tahoma', sans-serif;
+    font-size: 40px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
 
 #landing img {
     margin-bottom: 15px;
 }
 
-#landing img:hover {
-    opacity: 0.5;
-}
+
 
 #landing {
     background: url(../img/zen.jpg);
@@ -133,14 +215,31 @@ header nav ul li:hover {
     background-size: cover;
     background-attachment: fixed;
     color:white;
-
-   
 }
 
-/* #about {
-    margin-top:0px
+/*angebote */
+
+#angebote {
+display:flex;
+flex-direction: column;
 }
 
-#kurse p{
-    padding-bottom: 25vh;
-} */
+#angebote p {
+    text-align:center;
+}
+
+/* viniyoga */
+
+#viniyoga {
+    display:flex;
+    flex-direction: column;
+}
+
+#vini_zitat {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
