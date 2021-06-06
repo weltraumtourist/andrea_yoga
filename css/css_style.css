@@ -40,7 +40,7 @@ a {
 
 section {
     min-height: 100vh;
-    scroll-snap-align: start;
+
 }
 
 #contact h2, #about h2, #kurse h2, #viniyoga h2, #angebote h2 {
@@ -144,13 +144,18 @@ footer {
     margin-right: auto; 
     margin-left:  auto; 
     max-width: 960px;
-    width:100%; 
+    width:100%;
+    align-items: center;
+    padding-bottom: 0px;
+    box-shadow: -1px -2px rgba(0,0,0,0.1)
 }
 
 
 
 #footer_nav {
     text-align:right;
+    display: flex;
+    align-items: center;
 }
 
 #footer_nav ul li {
@@ -158,6 +163,11 @@ footer {
     margin-right:25px;
 }
 
+#copyright {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 
 footer ul li a, #copyright {
     font-size: 15px;
@@ -232,7 +242,23 @@ p{
 
 /* über mich */
 
+#qualifikationen_container {
+    margin-right: 10%;
+    margin-left: 10%;
+    display:flex
+}
 
+#logos_uebermich {
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+
+}
+
+#qualifikationen li {
+    list-style-type: disc;
+    text-align: left;
+}
 
 
 /* Kurse */
@@ -286,11 +312,20 @@ flex-direction: column;
 }
 
 #viny_container {
-    margin-top: 50px;
+    display:flex;
+    margin-top: 30px;
+    flex-direction: column;
 }
 
 .viniyoga_inhalt {
     font-weight: 700;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+#viny_container ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #vini_link {
@@ -351,11 +386,22 @@ header nav ul li {
 
 @media screen and (max-width: 500px) {
 
-
+footer ul li a, #copyright {
+    font-size:13px;
+}
 
 header nav ul li a{
     font-size:13px;
 }
 
+#qualifikationen_container {
+    margin-right: 2%;
+    margin-left: 1%;
+    flex-direction: column;
+}
+
+#logos_uebermich {
+flex-direction: row;
+}
 
 }
