@@ -17,17 +17,17 @@ html, body {
 .wrapper {
     margin-right: auto; 
     margin-left:  auto; 
-    height:100%;
+    height:100vh;
     max-width: 960px;   
     background-color: white;
-    
+    overflow-y: scroll;    
 }
 
 hr {
     width: 5%;
     height:3px;
     border:0;
-    margin: 5 auto 20px auto;
+    margin: 5px auto 20px auto;
     background: black;
     
 }
@@ -40,10 +40,15 @@ a {
 
 section {
     min-height: 100vh;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scroll-snap-type: y proximity;
+    border-bottom: 5px solid black;
 }
 
-#contact h2, #about h2, #kurse h2, #viniyoga h2, #angebote h2 {
+#contact h2, #about h2, #kurse h2, #viniyoga h2, #angebote h2, #impressum h2, #datenschutz h2 {
     font-family: 'Quicksand', sans-serif;
     font-size: 40px;
     margin-bottom: 0;
@@ -57,8 +62,9 @@ li {
 
 h1 {font-family: 'Pattaya', sans-serif;
     font-size: 80px;
-    padding-top: 30%;
+    padding-top: 0px;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 
@@ -156,17 +162,28 @@ footer {
     text-align:right;
     display: flex;
     align-items: center;
+    height: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #footer_nav ul li {
     float:right;
     margin-right:25px;
+    padding: 0px
+}
+
+#footer_nav ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #copyright {
     display:flex;
     justify-content: center;
     align-items: center;
+    margin-left: 25px;
+    height:30px;
 }
 
 footer ul li a, #copyright {
@@ -175,9 +192,6 @@ footer ul li a, #copyright {
     font-weight: 500;
     color: black;
  }
-
-
-
 
 
 
@@ -199,7 +213,7 @@ footer ul li a, #copyright {
 p{
     padding-left: 20px;
     padding-right: 20px;
-    text-align:center;
+    text-align:justify;
 }
 
 
@@ -229,6 +243,10 @@ p{
     margin-bottom: 15px;
 }
 
+#landing_text {
+    text-align: center;
+    margin:auto;
+}
 
 
 #landing {
@@ -237,12 +255,14 @@ p{
     background-size: cover;
     background-attachment: fixed;
     color:white;
+    display:flex;
+    flex-direction: column;
 }
 
 
 /* über mich */
 
-#qualifikationen_container {
+#qualifikationen_container, #referenzen {
     margin-right: 10%;
     margin-left: 10%;
     display:flex
@@ -252,10 +272,14 @@ p{
     display:flex;
     justify-content:center;
     flex-direction: column;
-
 }
 
-#qualifikationen li {
+#referenzen h4 {
+    display:flex;
+    margin: auto;
+}
+
+#qualifikationen li, #referenzen li{
     list-style-type: disc;
     text-align: left;
 }
@@ -273,6 +297,8 @@ p{
     overflow-y: auto;
     
 }
+
+
 
 #kurse th, #kurse td{
     border: 1px solid black;
@@ -296,6 +322,8 @@ flex-direction: column;
     justify-content: space-evenly;
     padding-left: 20px;
     padding-right: 20px;
+    width:100%;
+    text-align:left;
 }
 
 .bildunterschrift {
@@ -334,6 +362,10 @@ flex-direction: column;
 }
 
 /* Kontakt */
+
+form {
+    width: 100%;
+}
 
 form input, textarea {
     margin-bottom: 10px;
@@ -394,7 +426,7 @@ header nav ul li a{
     font-size:13px;
 }
 
-#qualifikationen_container {
+#qualifikationen_container, #referenzen {
     margin-right: 2%;
     margin-left: 1%;
     flex-direction: column;
@@ -403,5 +435,37 @@ header nav ul li a{
 #logos_uebermich {
 flex-direction: row;
 }
+
+p {
+    text-align: justify;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+#landing h2 {
+    font-size:30px;
+}
+
+h4 {
+    font-size:20px;
+}
+
+footer {
+    position: static;
+    max-height:50px
+}
+
+#footer_nav {
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 50px;
+}
+
+#copyright {
+    height:50px
+}
+
 
 }
