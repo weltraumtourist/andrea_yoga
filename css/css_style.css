@@ -7,7 +7,7 @@ html, body {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: 'Georgia', sans-serif;
+    font-family: 'Microsoft Phags PA', sans-serif;
     font-size: 16px;
     background-color: rgb(185, 184, 184);
  
@@ -15,12 +15,12 @@ html, body {
 
 
 .wrapper {
+    background-color: white;   
     margin-right: auto; 
     margin-left:  auto; 
     height:100vh;
     max-width: 960px;   
-    background-color: white;
-    overflow-y: scroll;    
+    overflow-y:visible;
 }
 
 hr {
@@ -41,14 +41,14 @@ a {
 section {
     min-height: 100vh;
     display: flex;
+    background-color: inherit;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    scroll-snap-type: y proximity;
     border-bottom: 5px solid black;
 }
 
-#contact h2, #about h2, #kurse h2, #viniyoga h2, #angebote h2, #impressum h2, #datenschutz h2 {
+#contact h2, #about h2, #kurse h2, #viniyoga h2, #angebote h2, #impressum h2, #datenschutz h2, #aktuelles h2{
     font-family: 'Quicksand', sans-serif;
     font-size: 40px;
     margin-bottom: 0;
@@ -90,7 +90,7 @@ header {
     top:0;
     background:white;
     z-index: 5;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
     margin-right: auto; 
     margin-left:  auto; 
     max-width: 960px;
@@ -270,7 +270,8 @@ p{
 
 #logos_uebermich {
     display:flex;
-    justify-content:center;
+
+    justify-content:space-evenly;
     flex-direction: column;
 }
 
@@ -320,14 +321,16 @@ flex-direction: column;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
     width:100%;
-    text-align:left;
+
 }
 
 .bildunterschrift {
     margin-top: 4px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 /* viniyoga */
@@ -388,7 +391,17 @@ form textarea {
     height: 30px;
 }
 
+/*Impressum*/
 
+#impressum_inhalt {
+    text-align: left;
+
+}
+
+#impressum_inhalt p{
+    padding-left: 0px;
+    padding-right: 0px;
+}
 
 /*media  queries*/
 
